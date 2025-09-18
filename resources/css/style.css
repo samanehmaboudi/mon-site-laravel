@@ -1,0 +1,54 @@
+/* ======= HOME style “Virb” ======= */
+:root{
+  --virb-green:#2ecc71;        /* vert des cartes */
+  --virb-green-ink:#11643a;    /* texte/trait sur vert */
+}
+
+.hero-virb{
+  position:relative;
+  min-height:72vh;              /* grand mais pas 100%, comme l’exemple */
+  padding-top:110px;            /* espace sous la navbar fixe */
+  background-image:url('/img/hero-home.jpg');
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.hero-virb .hero-overlay{
+  position:absolute; inset:0;
+  background:rgba(0,0,0,.55);   /* overlay sombre */
+}
+.hero-virb .container{ position:relative; z-index:1 }
+.text-white-75{ color:rgba(255,255,255,.75) }
+
+/* Bande de services qui chevauche le bas du héros */
+.services-strip{
+  margin-top:-60px;             /* chevauchement */
+  padding-bottom:32px;
+}
+.service-card{
+  background:var(--virb-green);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:12px;
+  padding:22px 22px 18px;
+  color:#053a20;
+  box-shadow:0 14px 36px rgba(0,0,0,.08);
+}
+.service-card .icon-wrap{
+  width:46px; height:46px; border-radius:8px;
+  display:grid; place-items:center;
+  background:#c9f5da; color:var(--virb-green-ink);
+  margin-bottom:10px; font-size:22px; font-weight:700;
+}
+.service-card h5{ color:var(--virb-green-ink); font-weight:800; letter-spacing:.2px }
+.service-card p{ color:#08492a }
+.service-link{
+  display:inline-block; font-weight:800; color:var(--virb-green-ink);
+  text-decoration:none; border-bottom:2px solid rgba(5,58,32,.35); padding-bottom:2px;
+}
+.service-link:hover{ color:#072; border-bottom-color:#072 }
+
+/* Optionnel : activer une pastille verte sous le lien actif de nav */
+.nav-pills-soft .nav-link.active,
+.navbar-transparent .nav-link.active{
+  color:var(--virb-green) !important;
+}
